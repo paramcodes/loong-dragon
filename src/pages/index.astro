@@ -1,0 +1,79 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import DragonCanvas from "@/components/DragonCanvas";
+---
+
+<BaseLayout
+  title="Paramveer Singh — Loong Portfolio"
+  description="Full-stack developer & agentic AI engineer. AI systems and backends that ship."
+>
+  <Fragment slot="dragon">
+    <DragonCanvas client:only="react" />
+  </Fragment>
+
+  <section class="section" style="min-height: calc(100svh - var(--header-h)); display:flex; flex-direction:column; justify-content:center;">
+    <div class="wrap">
+      <p class="eyebrow" style="margin-bottom:1.25rem;">
+        <span class="dot"></span>Open to internships, freelance & full-time roles
+      </p>
+      <h1 style="font-size:var(--text-3xl); max-width:18ch;">
+        Paramveer builds <em style="font-style:normal; color:var(--vermilion);">AI systems</em>&nbsp;&amp; backends that&nbsp;ship.
+      </h1>
+      <p style="font-size:var(--text-lg); color:var(--ink-2); max-width:56ch; margin-block:1.5rem 2.25rem;">
+        Full-stack developer and agentic AI engineer — RAG pipelines, LLM agents and cloud
+        infra in production. A loong flies this page; scroll and it follows.
+      </p>
+      <div style="display:flex; gap:0.9rem; flex-wrap:wrap;">
+        <a class="pill pill-solid" href="#work">View my work →</a>
+        <a class="pill pill-outline" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section" style="padding-block:clamp(4rem,9vw,7.5rem);">
+    <div class="wrap">
+      <p class="eyebrow" style="margin-bottom:1rem;">Work</p>
+      <h2 style="font-size:var(--text-2xl); margin-bottom:2.5rem;">Things that run in production</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.25rem;">
+        <div class="card">
+          <h3 style="font-size:var(--text-lg); margin-bottom:0.5rem;">ATLAS RAG API</h3>
+          <p style="color:var(--ink-2);">RAPTOR indexing, RRF fusion, pgvector. Live on GitHub.</p>
+          <p class="eyebrow" style="margin-top:1rem;">RAG · pgvector · AWS</p>
+        </div>
+        <div class="card">
+          <h3 style="font-size:var(--text-lg); margin-bottom:0.5rem;">GSSoC '24 Admin</h3>
+          <p style="color:var(--ink-2);">Led 50+ contributors, 50+ PRs merged, zero-downtime deploys.</p>
+          <p class="eyebrow" style="margin-top:1rem;">Open source · 70 repos</p>
+        </div>
+        <div class="card">
+          <h3 style="font-size:var(--text-lg); margin-bottom:0.5rem;">Agentic Pipelines</h3>
+          <p style="color:var(--ink-2);">Distributed inference experiments and LLM agent harnesses.</p>
+          <p class="eyebrow" style="margin-top:1rem;">Agents · TUIs · Systems</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section night-band">
+    <div class="wrap" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem; align-items:start;">
+      <div>
+        <p class="eyebrow" style="margin-bottom:1rem;">About</p>
+        <h2 style="font-size:var(--text-2xl);">Understand the runtime, don't wrap the black box.</h2>
+      </div>
+      <p style="font-size:var(--text-md); color:var(--night-muted); max-width:52ch;">
+        I build from scratch: parsers before libraries, schedulers before frameworks.
+        500+ DSA problems solved, a LeetCode habit, and a bias for shipping small things fast.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="wrap" style="text-align:center; padding-block:2rem;">
+      <p class="eyebrow" style="margin-bottom:1rem;">Contact</p>
+      <h2 style="font-size:var(--text-2xl); margin-bottom:1.75rem;">
+        The dragon stops here. <span style="color:var(--vermilion);">Say hello.</span>
+      </h2>
+      <a class="pill pill-solid" href="mailto:sparamveer1001@gmail.com">sparamveer1001@gmail.com</a>
+    </div>
+  </section>
+</BaseLayout>
